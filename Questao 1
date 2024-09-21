@@ -1,0 +1,12 @@
+1. Qual é o tipo de cada uma das seguintes expressões? (Algumas delas geram erros de tipo.)
+a)`"squid" ++ "clam"`
+b)`[True, False, True, True]`
+c)`[True, False, 'a']`
+d)`(True, False, 'a')`
+
+Respostas:
+a) Concatenação de listas de Char, gerando uma string
+b) Lista de booleanos, de  elementos do tipo booleano
+c) Gerará um erro já que teremos uma lista contendo elementos do tipo booleano e caracter, logo ocorrerá um erro
+d)Tupla com tipos diferentes, tipo (booleano, booleano, Char)
+
