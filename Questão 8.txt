@@ -1,0 +1,19 @@
+Qual é o tipo de cada uma das seguintes expressões Haskell? (Algumas podem gerar um erro.)
+
+ my_const (genérico, recebe dois argumentos de qualquer tipo e retorna o primeiro argumento my_const :: a -> b -> a)
+
+my_const True (quando aplicamos True no my_const o argumrnto a é fixado como Bool, o tipo de b permanece genérico, porém retorna um Boll.)
+
+append (concatena duas listas do mesmo tipo a, portanto o tipo é genérico e vai depender do tipo dos elementos da lista);
+
+append [] (ao aplicar uma lista vazia em append, ainda não há nada definido, portanto o tipo é genérico, vai depender dos elementos contidos na lista passada posteriormente);
+
+append [True, False] (Como append recebe a lista [True, False] (uma lista de Bool), o tipo é fixado como [Bool])
+
+append [3] ['a', 'b'] (erro de tipos, pois [3] é uma lista de inteiros e ['a', 'b'] é uma lista de caracteres, como append só pode concatenar listas do mesmo tipo, dá erro de tipo);
+
+append "squid" ['a', 'b'] (tipo char, pois "squid" é uma string que é uma lista de caracteres. como ambas as listas são tipo char, o tipo será char);
+
+my_map (o tipo é genérico, pois my_map pode mapear qualquer função de um tipo para outro sobre uma lista, então, depende do tipo de b, cada elemento de uma lista [a], resulta em uma lista de elementos do tipo b);
+
+my_map (my_const True) (A função my_const True tem tipo b -> Bool. Quando você passa essa função para my_map, você obtém uma função que mapeia listas de elementos de qualquer tipo (b) para uma lista de booleanos ([Bool]), pois my_const True sempre retorna True para qualquer entrada. O tipo final é Bool);
