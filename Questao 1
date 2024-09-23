@@ -1,3 +1,5 @@
+Alunos: Helson Gonçalves dos Santos Filho; Joana Beatriz Silva Brandão; Thales Soares Amorim
+
 1. Qual é o tipo de cada uma das seguintes expressões? (Algumas delas geram erros de tipo.)
 a)`"squid" ++ "clam"`
 b)`[True, False, True, True]`
